@@ -22,7 +22,7 @@ class HornedBeasts extends React.Component{
     }
     render(){
         return(
-            <div style={{ width: '25%', display:'flex', justifyContent:'center', justifyItems:'center', flexWrap:'wrap', alignItems:'center',alighnContent:'center' } }>
+            <div >
                 {/* <h2> {this.props.HornedBeastsTitle}</h2>
                 
                 <img src={this.props.HornedBeastsImage} alt="image"/> 
@@ -31,7 +31,7 @@ class HornedBeasts extends React.Component{
                     {this.props.HornedBeastsDescription}
                 </p> */}
 
-                <Card style={{ width: '18rem', display:'flex' } }>
+                <Card style={{ width: '18rem' } }>
                     <Card.Img variant="top" src={this.props.HornedBeastsImage} />
                     <Card.Body>
                         <Card.Title>{this.props.HornedBeastsTitle}</Card.Title>
@@ -44,7 +44,7 @@ class HornedBeasts extends React.Component{
                         </Card.Text>
                         <Button variant="primary" onClick={this.counterFunction} >Vote</Button>
                     </Card.Body>
-                    </Card>
+                </Card>
     
             </div>
         )
