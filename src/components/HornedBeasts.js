@@ -15,10 +15,12 @@ class HornedBeasts extends React.Component{
     }
     counterFunction=()=>{
         this.setState({
-            votesNo:this.state.votesNo+1
-
-        })
-
+            votesNo:this.state.votesNo+1            
+        });
+        this.props.increment2(this.props.HornedBeastsTitle);
+    }
+    showInModal=()=>{
+        this.props.showInModal(this.props.HornedBeastsTitle);
     }
     render(){
         return(
@@ -32,7 +34,7 @@ class HornedBeasts extends React.Component{
                 </p> */}
 
                 <Card style={{ width: '18rem' } }>
-                    <Card.Img variant="top" src={this.props.HornedBeastsImage} />
+                    <Card.Img variant="top" src={this.props.HornedBeastsImage} onClick={this.showInModal} />
                     <Card.Body>
                         <Card.Title>{this.props.HornedBeastsTitle}</Card.Title>
                         <Card.Text>
@@ -43,6 +45,8 @@ class HornedBeasts extends React.Component{
                         💓  Number Of votes: {this.state.votesNo}                        
                         </Card.Text>
                         <Button variant="primary" onClick={this.counterFunction} >Vote</Button>
+                        
+
                     </Card.Body>
                 </Card>
     
