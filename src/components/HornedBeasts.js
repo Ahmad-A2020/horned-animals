@@ -43,6 +43,8 @@ class HornedBeasts extends React.Component{
                         💓  Number Of votes: {this.state.votesNo}                        
                         </Card.Text>
                         <Button variant="primary" onClick={this.counterFunction} >Vote</Button>
+                        
+
                     </Card.Body>
                 </Card>
     
