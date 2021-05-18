@@ -20,6 +20,9 @@ class main extends React.Component{
                             HornedBeastsImage={item.image_url}
                             HornedBeastsDescription={item.description}
                             key={index}
+                            increment2={this.props.increment}
+                            showInModal={this.props.showInModal}
+                            
                             />
                         );
                     })
