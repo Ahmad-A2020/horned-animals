@@ -47,12 +47,25 @@ class App extends React.Component {
     })
   }
 
+  filterHorned=(value)=>{   
+    let filterdArray=Data.filter(item=>{
+      if (item.horns==value){
+        return item;
+      }else if(value=='all'){
+        return item;
+      }
+    });
+    this.setState({      
+      dataarray:filterdArray
+    })
+  }
+  
   render() {
     return (
-      <div>  []
+      <div>  
                
         <Header/>
-        <Main BeastArray={this.state.dataarray} increment={this.increment} showInModal={this.showInModal}  />
+        <Main filterHorned={this.filterHorned}  BeastArray={this.state.dataarray} increment={this.increment} showInModal={this.showInModal}  />
         <SelectedBeast title={this.state.item.title } show={this.state.show}
           hide={this.state.hideInModal} description={this.state.item.description} image={this.state.item.image_url}
           item={this.state.item} handleClick={this.showInModal} votes={this.state.item.votes} handleClick={this.hideInModal} />
